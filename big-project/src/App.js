@@ -1,6 +1,6 @@
-
-
 import React, { useState, useEffect } from "react";
+import DarkFunc from "./components/DarkFunc";
+import MultiPage from "./components/MultiPage";
 import './App.css';
 
 
@@ -18,23 +18,24 @@ function App() {
   }, [darkMode]);
 
   return (
-    <div className="App" data-theme={darkMode ? "dark" : "light"}>
-      <h1>React Toggle Dark Mode</h1>
-      <h2>Persistant DarkMode with useEffect() and localStorage !</h2>
+    <div>
+      <DarkFunc id={darkMode} darkMode={darkMode} toggleDarkMode={toggleDarkMode} /> 
       
-      {darkMode && <button onClick={toggleDarkMode} style={{background: 'black',
-        color: 'lightgrey'}}>
-        {"Switch to Light Mode"}
-      </button>}
-      
-      {!darkMode && <button onClick={toggleDarkMode} style={{background: 'grey',
-        color: 'white'}}>
-        {"Switch to Dark Mode"}
-      </button>}
+      <MultiPage id={}/>
 
+    <Router>
+    <Navbar />
+    <Routes>
+      <Route path="/home" component={Home} />
+      <Route path='/about' element={<About/>} />
+      <Route path='/contact' element={<Contact/>} />
+      <Route path='/blogs' element={<Blogs/>} />
+      <Route path='/sign-up' element={<SignUp />} />
+    </Routes>
+    </Router>
 
-      
     </div>
+
   );
 }
 
