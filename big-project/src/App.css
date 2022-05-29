@@ -16,7 +16,6 @@ body {
 
 .App {
   padding-top: 10px;
-  height: 100vh;
   font-family: 'One serif';
   text-align: center;
   background-color: var(--bg-color);

@@ -19,10 +19,10 @@ function App() {
 
   return (
     <div>
+
       <DarkFunc id={darkMode} darkMode={darkMode} toggleDarkMode={toggleDarkMode} /> 
       
       <MultiPage />
-
 
     </div>
 
