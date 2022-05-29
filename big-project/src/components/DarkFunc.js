@@ -8,12 +8,12 @@ function DarkFunc(props) {
 
       {props.darkMode && <button onClick={props.toggleDarkMode} style={{background: 'black',
         color: 'lightgrey'}}>
-        {"Switch to Light Mode"}
+        {"Light Mode"}
       </button>}
       
       {!props.darkMode && <button onClick={props.toggleDarkMode} style={{background: 'grey',
         color: 'white'}}>
-        {"Switch to Dark Mode"}
+        {"Dark Mode"}
       </button>}
     
     </div>
