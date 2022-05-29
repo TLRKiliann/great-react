@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from "react";
-import DarkFunc from "./components/DarkFunc";
-import MultiPage from "./components/MultiPage";
+//import DarkFunc from "./components/DarkFunc";
+
+import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import Home from './Pages';
+import About from './Pages/about';
+import Blogs from './Pages/blogs';
+import SignUp from './Pages/signup';
+import Contact from './Pages/contact';
 import './App.css';
 
 
@@ -18,14 +25,31 @@ function App() {
   }, [darkMode]);
 
   return (
-    <div>
+    <div className="App" data-theme={darkMode ? "dark" : "light"}>
 
-      <DarkFunc id={darkMode} darkMode={darkMode} toggleDarkMode={toggleDarkMode} /> 
+      {darkMode && <button onClick={toggleDarkMode} style={{background: 'black',
+        color: 'lightgrey'}}>
+        {"Light Mode"}
+      </button>}
       
-      <MultiPage />
+      {!darkMode && <button onClick={toggleDarkMode} style={{background: 'grey',
+        color: 'white'}}>
+        {"Dark Mode"}
+      </button>}
 
+      <div className="">
+        <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/home" component={Home} />
+          <Route path='/about' element={<About/>} />
+          <Route path='/contact' element={<Contact/>} />
+          <Route path='/blogs' element={<Blogs/>} />
+          <Route path='/sign-up' element={<SignUp />} />
+        </Routes>
+        </Router>
+      </div>
     </div>
-
   );
 }
 

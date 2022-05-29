@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 
 export const Nav = styled.nav`
-  background: #dcdcdc;
+  background: orange;
   height: 85px;
   display: flex;
   justify-content: space-between;
@@ -43,11 +43,6 @@ export const NavMenu = styled.div`
   display: flex;
   align-items: center;
   margin-right: -24px;
-  /* Second Nav */
-  /* margin-right: 24px; */
-  /* Third Nav */
-  /* width: 100vw;
-  white-space: nowrap; */
   @media screen and (max-width: 768px) {
     display: none;
   }
