@@ -18,11 +18,14 @@ h3 {
 
 .paragraph--div {
   text-align: justify;
-
 }
 
 p {
   font-size: 1rem;
+}
+
+legend {
+  margin: 10px;
 }
 
 #form--div {
@@ -57,6 +60,65 @@ label {
 
 input {
   margin: 20px 20px;
+}
+
+.fieldset--div {
+  display: flex;
+  align-items: center;
+
+  border: 2px solid red;
+}
+
+.fieldset--div label {
+  width: auto;
+
+  border: 2px solid orange;
+}
+
+.fieldset--div input {
+  width: auto;
+
+  border: 2px solid blue;
+}
+
+#fieldset--first {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+
+  border: 2px solid yellow;
+}
+
+.inlab--div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+}
+
+.inlab--div input {
+  margin-left: 40px;
+}
+
+
+#fieldset--second {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+
+  border: 2px solid yellow;
+}
+
+.inlab--divtwo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+}
+
+.inlab--divtwo input {
+  margin-left: 60px;
 }
 
 textarea {
