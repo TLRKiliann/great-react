@@ -42,13 +42,42 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/home" component={Home} />
-          <Route path='/about' element={<About/>} />
-          <Route path='/contact' element={<Contact/>} />
-          <Route path='/blogs' element={<Blogs/>} />
+          <Route path='/about' element={<About />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/blogs' element={<Blogs />} />
           <Route path='/sign-up' element={<SignUp />} />
         </Routes>
         </Router>
       </div>
+
+      <div className="home--div">
+        <h3>Welcome on my project React. There are many things...</h3>
+        <nav>
+          <ul>
+            <li>
+              <a>
+                Multiple pages
+              </a>
+            </li>
+            <li>
+              <a>
+                Darkmode
+              </a>
+            </li>
+            <li>
+              <a>
+                Form to login (sign-up)
+              </a>
+            </li>
+            <li>
+              <a>
+                Contact (img + react icons)
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    
     </div>
   );
 }
