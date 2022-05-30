@@ -1,0 +1,150 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.about--div {
+  margin: 0px 50px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+.paragraph--div {
+  text-align: justify;
+}
+
+p {
+  font-size: 1rem;
+}
+
+legend {
+  margin: 10px;
+}
+
+#form--div {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  
+  border: 2px solid lightblue;
+}
+
+form {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  border: 2px solid blue;
+}
+
+label {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+
+  border: 2px solid orange;
+}
+
+input {
+  margin: 20px 20px;
+}
+
+.fieldset--div {
+  width: 100%;
+  margin: 20px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 2px solid red;
+}
+
+.fieldset--div label {
+  width: auto;
+
+  border: 2px solid orange;
+}
+
+.fieldset--div input {
+
+  border: 2px solid blue;
+}
+
+#fieldset--first {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+
+  border: 2px solid dimgrey;
+  border-radius: 12px;
+}
+
+.inlab--div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+}
+
+.inlab--div input {
+  margin-left: 40px;
+}
+
+
+#fieldset--second {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+
+  border: 2px solid dimgrey;
+  border-radius: 12px;
+}
+
+.inlab--divtwo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+}
+
+.inlab--divtwo input {
+  margin-left: 60px;
+}
+
+
+#select--div {
+  display: flex;
+  align-items: center;
+  border: 2px solid navy;
+}
+
+#select--div label {
+  margin: 0px 20px;
+  text-align: left;
+}
+
+textarea {
+  width: 400px;
+  height: 100px;
+  margin-top: 20px;
+}
+
+.btn-signup {
+  margin-top: 20px;
+  padding: 5px 20px;
+}
