@@ -47,27 +47,27 @@ const SignUp = () => {
 
           <div className="fieldset--div">
             <fieldset id="fieldset--first">
-              <legend>Select your browser :</legend>
+              <legend>Select your crawler :</legend>
 
               
               <div className="inlab--div">
-                <input id="ham" type="checkbox" name="toppings" value="ham" />
-                <label for="ham">Google</label><br/>
+                <input id="google" type="checkbox" name="toppings" value="google" />
+                <label for="google">Google</label><br/>
               </div>
 
               <div className="inlab--div">
-                <input id="pepperoni" type="checkbox" name="toppings" value="pepperoni" />
-                <label for="pepperoni">Firefox</label><br/>
+                <input id="firefox" type="checkbox" name="toppings" value="firefox" />
+                <label for="firefox">Firefox</label><br/>
               </div>
 
               <div className="inlab--div">
-                <input id="mushrooms" type="checkbox" name="toppings" value="mushrooms" />
-                <label for="mushrooms">Ecosia</label><br/>
+                <input id="ecosia" type="checkbox" name="toppings" value="ecosia" />
+                <label for="ecosia">Ecosia</label><br/>
               </div>
 
               <div className="inlab--div">
-                <input id="olives" type="checkbox" name="toppings" value="olives" />
-                <label for="olives">Qwant</label>
+                <input id="qwant" type="checkbox" name="toppings" value="qwant" />
+                <label for="qwant">Qwant</label>
               </div>
 
             </fieldset> 
@@ -75,29 +75,46 @@ const SignUp = () => {
 
 
             <fieldset id="fieldset--second">
-              <legend>Choose a shipping method:</legend>
+              <legend>Choose your favorite code :</legend>
 
               <div className="inlab--divtwo">
-                <input id="overnight" type="radio" name="shipping" value="overnight" />
-                <label for="overnight">Overnight</label><br/>
+                <input id="python" type="radio" name="language" value="python" />
+                <label for="python">Python</label><br/>
               </div>
               
               <div className="inlab--divtwo">
-                <input id="twoday" type="radio" name="shipping" value="twoday" />
-                <label for="twoday">Two day</label><br/>
+                <input id="js" type="radio" name="language" value="js" />
+                <label for="js">JavaScript</label><br/>
               </div>
               
               <div className="inlab--divtwo">
-                <input id="ground" type="radio" name="shipping" value="ground" />
-                <label for="ground">Ground</label>
+                <input id="java" type="radio" name="language" value="java" />
+                <label for="java">Java</label>
+              </div>
+
+              <div className="inlab--divtwo">
+                <input id="csharp" type="radio" name="language" value="csharp" />
+                <label for="csharp">C#</label>
+              </div>
+
+              <div className="inlab--divtwo">
+                <input id="cplus" type="radio" name="language" value="cplus" />
+                <label for="cplus">C++</label>
+              </div>
+
+              <div className="inlab--divtwo">
+                <input id="langc" type="radio" name="language" value="langc" />
+                <label for="langc">C</label>
               </div>
 
             </fieldset>
           </div>
 
-          <label for="favcity">Which is your favorite city?</label>
+          <div id="select--div">
+            <label for="favcity">Which is your favorite city?</label>
+
             <select id="favcity" name="select">
-              <option value="1">Amsterdam</option>
+              <option value="1">Dallas</option>
               <option value="2">Buenos Aires</option>
               <option value="3">Delhi</option>
               <option value="4">Hong Kong</option>
@@ -108,7 +125,9 @@ const SignUp = () => {
               <option value="9">New York</option>
               <option value="10">São Paulo</option>
               <option value="11">Tokyo</option>
-            </select> 
+            </select>
+
+          </div>
 
 
           <textarea id="textarea" type="text" name="textarea" placeholder="Write something here...">

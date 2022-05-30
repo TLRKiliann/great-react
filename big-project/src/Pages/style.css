@@ -63,8 +63,11 @@ input {
 }
 
 .fieldset--div {
+  width: 100%;
+  margin: 20px 0px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
   border: 2px solid red;
 }
@@ -76,17 +79,18 @@ input {
 }
 
 .fieldset--div input {
-  width: auto;
 
   border: 2px solid blue;
 }
 
 #fieldset--first {
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: left;
 
-  border: 2px solid yellow;
+  border: 2px solid dimgrey;
+  border-radius: 12px;
 }
 
 .inlab--div {
@@ -102,12 +106,13 @@ input {
 
 
 #fieldset--second {
-  width: 50%;
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: left;
 
-  border: 2px solid yellow;
+  border: 2px solid dimgrey;
+  border-radius: 12px;
 }
 
 .inlab--divtwo {
@@ -119,6 +124,18 @@ input {
 
 .inlab--divtwo input {
   margin-left: 60px;
+}
+
+
+#select--div {
+  display: flex;
+  align-items: center;
+  border: 2px solid navy;
+}
+
+#select--div label {
+  margin: 0px 20px;
+  text-align: left;
 }
 
 textarea {
