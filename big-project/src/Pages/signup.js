@@ -1,6 +1,11 @@
 import React from 'react';
-//import { useState } from 'react';
 import "./style.css"
+
+
+/*
+Miss to verify password (passwd and confirm)
+*/
+
 
 
 class SignUp extends React.Component {
@@ -15,33 +20,37 @@ class SignUp extends React.Component {
       rememberMe: false
     };
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    //this.handleSubmit = this.handleSubmit.bind(this);
+    //! e (event) for binding !
     this.Remove = this.Remove.bind(this);
   };
 
   componentDidMount() {
-    const rememberMe = localStorage.getItem('Remember') === 'true';
-    const entryName = rememberMe ? localStorage.getItem('Name') : '';
-    const entryLastName = rememberMe ? localStorage.getItem('Lastname') : '';
-    const entryEmail = rememberMe ? localStorage.getItem('email') : '';
-    const passwd = rememberMe ? localStorage.getItem('Password') : '';
+    const rememberMe = JSON.parse(localStorage.getItem('Remember')) === "true";
+    const entryName = rememberMe ? JSON.parse(localStorage.getItem('Name')) : '';
+    const entryLastName = rememberMe ? JSON.parse(localStorage.getItem('Lastname')) : '';
+    const entryEmail = rememberMe ? JSON.parse(localStorage.getItem('email')) : '';
+    const passwd = rememberMe ? JSON.parse(localStorage.getItem('Password')) : '';
     this.setState({ rememberMe, entryName, entryLastName, entryEmail, passwd });
   };
 
   handleSubmit = (e) => {
+    //if (e.target.value passwd === e.target.value confirm)
     const { entryName, entryLastName, passwd, entryEmail, rememberMe } = this.state;
     localStorage.setItem('Name', JSON.stringify(entryName));
     localStorage.setItem('Lastname', JSON.stringify(entryLastName));
     localStorage.setItem('email', JSON.stringify(entryEmail));
     localStorage.setItem('Password', JSON.stringify(passwd));
     localStorage.setItem('Remember', JSON.stringify(rememberMe));
+    e.preventDefault();
   };
 
-  handleChange = (e) => {
-    const input = e.target;
+  handleChange = (event) => {
+    const input = event.target;
     this.setState({
       [input.name]: input.type === 'checkbox' ? input.checked : input.value
     });
+    //console.log(event.target["name"])
   };
 
   Remove = () => {
@@ -50,6 +59,7 @@ class SignUp extends React.Component {
     localStorage.removeItem('email');
     localStorage.removeItem('Password');
   };
+
   render() {
     const {entryName, entryLastName, passwd, confirm, entryEmail, rememberMe} = this.state;
     return (
@@ -64,66 +74,83 @@ class SignUp extends React.Component {
               Please enter your informations below
             </legend>
 
-            <label>
-              <h4>Name</h4>
+            <div className="label--input">
+              <label>
+                <h4>Name</h4>
+              </label>
               <input
-                id="name"
-                type="text"
                 name="name"
-                value={entryName}
-                onChange={this.handleChange}
-                placeholder="name" />
-            </label>
-
-            <label>
-              <h4>Lastname</h4>
-              <input
-                id="lastname"
                 type="text"
+                value={entryName}
+                onChange={(e) => this.setState({entryName: e.target.value})}
+                placeholder="name" 
+                required
+              />
+            </div>
+
+            <div className="label--input">            
+              <label>
+                <h4>Lastname</h4>
+              </label>
+              <input
                 name="lastname"
+                type="text"
                 value={entryLastName}
-                onChange={this.handleChange}
-                placeholder="lastname" />
-            </label>
+                onChange={(e) => this.setState({entryLastName: e.target.value})}
+                placeholder="lastname"
+                required
+              />
+            </div>
 
-            <label>
-              <h4>e-mail</h4>
+            <div className="label--input">
+              <label>
+                <h4>e-mail</h4>
+              </label>
               <input
-                id="entryEmail"
-                type="e-mail"
                 name="email"
+                type="e-mail"
                 value={entryEmail}
-                onChange={this.handleChange}
-                placeholder="e-mail" />
-            </label>
+                onChange={(e) => this.setState({entryEmail: e.target.value})}
+                placeholder="e-mail"
+                required
+              />
+            </div>
 
-            <label>
-              <h4>Password</h4>
+            <div className="label--input">
+              <label>
+                <h4>Password</h4>
+              </label>
               <input
-                id="passwd"
-                type="password"
                 name="passwd"
+                type="password"
                 value={passwd}
                 onChange={(e) => this.setState({passwd: e.target.value})}
-                placeholder="password" />
-            </label>
+                placeholder="password"
+                required
+              />
+            </div>
 
-            <label>
-              <h4>Confirm Password</h4>
+            <div className="label--input">
+              <label>
+                <h4>Confirm Password</h4>
+              </label>
               <input
-                id="confirm"
-                type="password"
                 name="confirm"
+                type="password"
                 value={confirm}
                 onChange={(e) => this.setState({confirm: e.target.value})}
-                placeholder="confirm password" />
-            </label>
+                placeholder="confirm password"
+                required
+              />
+            </div>
+
 
             <div className="fieldset--div">
+
               <fieldset id="fieldset--first">
+
                 <legend>Select your crawler :</legend>
 
-                
                 <div className="inlab--div">
                   <input id="google" type="checkbox" name="toppings" value="google" />
                   <label htmlFor="google">Google</label><br/>
@@ -147,8 +174,8 @@ class SignUp extends React.Component {
               </fieldset> 
 
 
-
               <fieldset id="fieldset--second">
+
                 <legend>Choose your favorite code :</legend>
 
                 <div className="inlab--divtwo">
@@ -182,6 +209,7 @@ class SignUp extends React.Component {
                 </div>
 
               </fieldset>
+
             </div>
 
             <div id="select--div">
@@ -203,14 +231,17 @@ class SignUp extends React.Component {
 
             </div>
 
-            <textarea id="textarea" type="text" name="textarea" placeholder="Write something here...">
-            
+            <textarea
+              name="textarea"
+              type="text"
+              placeholder="Write something here..."
+            >
             </textarea>
 
             <div className="remember--div">
               <input
+                name="rememberMe" 
                 type="checkbox"
-                name="remember" 
                 checked={rememberMe} 
                 onChange={this.handleChange}
               />
@@ -224,11 +255,18 @@ class SignUp extends React.Component {
           </form>
           
           <div>
-            <p>Name: {localStorage.getItem('Name')}</p>
-            <p>Lastname: {localStorage.getItem('Lastname')}</p>
-            <p>Email: {localStorage.getItem('email')}</p>
-            <p>Password: {localStorage.getItem('Password')}</p>
+            <p>Name: {JSON.parse(localStorage.getItem('Name'))}</p>
+            <p>Lastname: {JSON.parse(localStorage.getItem('Lastname'))}</p>
+            <p>Email: {JSON.parse(localStorage.getItem('email'))}</p>
+            <p>Password: {JSON.parse(localStorage.getItem('Password'))}</p>
             <p>Remember: {localStorage.getItem('Remember')}</p>
+          </div>
+
+          <div id="btn--rmlocalstorage">
+            <legend>Remove localStorage</legend>
+            <button onClick={this.Remove}>
+              Remove
+            </button>
           </div>
 
         </div>
