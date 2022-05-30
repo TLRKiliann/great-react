@@ -27,12 +27,12 @@ function App() {
   return (
     <div className="App" data-theme={darkMode ? "dark" : "light"}>
 
-      {darkMode && <button onClick={toggleDarkMode} style={{background: 'black',
+      {darkMode && <button className="btn--dark" onClick={toggleDarkMode} style={{background: 'black',
         color: 'lightgrey'}}>
         {"Light Mode"}
       </button>}
       
-      {!darkMode && <button onClick={toggleDarkMode} style={{background: 'grey',
+      {!darkMode && <button className="btn--dark" onClick={toggleDarkMode} style={{background: 'grey',
         color: 'white'}}>
         {"Dark Mode"}
       </button>}

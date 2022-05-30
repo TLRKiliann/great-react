@@ -16,15 +16,15 @@ body {
 
 .App {
   width: 100%;
-  height: 100vh;
+  height: 150vh;
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: 'One serif';
 
-  border: 2px solid lightblue;
+  /*border: 2px solid lightblue;*/
 }
 
-button {
+.btn--dark {
   position: fixed;
   top: 10px;
   right: 10px;
@@ -32,5 +32,5 @@ button {
   font-family: 'karla', sans-serif;
   font-size: 1rem;
 
-  border: 2px solid blue;
+  /*border: 2px solid blue;*/
 }
