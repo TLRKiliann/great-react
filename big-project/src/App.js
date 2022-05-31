@@ -49,34 +49,6 @@ function App() {
         </Routes>
         </Router>
       </div>
-
-      <div className="home--div">
-        <h3>Welcome on my project React. There are many things...</h3>
-        <nav>
-          <ul>
-            <li>
-              <a>
-                Multiple pages
-              </a>
-            </li>
-            <li>
-              <a>
-                Darkmode
-              </a>
-            </li>
-            <li>
-              <a>
-                Form to login (sign-up)
-              </a>
-            </li>
-            <li>
-              <a>
-                Contact (img + react icons)
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
     
     </div>
   );
