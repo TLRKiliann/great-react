@@ -3,7 +3,8 @@ import React, { useState, useEffect } from "react";
 
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import Home from './Pages';
+//import Index from "./pages/index.js";
+import Home from "./Pages/Home";
 import About from './Pages/about';
 import Blogs from './Pages/blogs';
 import SignUp from './Pages/signup';
@@ -39,14 +40,14 @@ function App() {
 
       <div className="">
         <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/home" component={Home} />
-          <Route path='/about' element={<About />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/blogs' element={<Blogs />} />
-          <Route path='/sign-up' element={<SignUp />} />
-        </Routes>
+          <Navbar />
+          <Routes>
+            <Route path="/Home" element={<Home />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/contact' element={<Contact />} />
+            <Route path='/blogs' element={<Blogs />} />
+            <Route path='/sign-up' element={<SignUp />} />
+          </Routes>
         </Router>
       </div>
     
