@@ -24,17 +24,17 @@ const Blogs = () => {
               </li>
               <li>
                 <a className="bloglink--div">
-                  title 3 title 3
+                  Title 3 title 3
                 </a>
               </li>
               <li>
                 <a className="bloglink--div">
-                  title 4 title 4
+                  Title 4 title 4
                 </a>
               </li>
               <li>
                 <a className="bloglink--div">
-                  title 3 title 5
+                  Title 3 title 5
                 </a>
               </li>
               <li>
