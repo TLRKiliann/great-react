@@ -48,7 +48,9 @@ legend {
 
   width: 240px;
   height: 60%;
-  border: 2px solid white;
+
+  background: dimgrey;
+  /*border: 2px solid white;*/
 }
 
 .aside--blog {
@@ -58,34 +60,35 @@ legend {
   display: flex;
   flex-direction: column;
 
-  border: 2px solid orange;
+  /*border: 2px solid orange;*/
 }
 
 .aside--blog nav {
   margin: auto;
   display: flex;
 
-
-  border: 2px solid pink;
+  /*border: 2px solid pink;*/
 }
 
 .aside--blog ul {
   margin: auto;
   padding-left: 0px;
-  border: 2px solid blue;
+  /*border: 2px solid blue;*/
 }
 
 .aside--blog li {
   margin: 20px 0px;
 
-  border: 2px solid violet;
+  /*border: 2px solid violet;*/
 }
 
 .bloglink--div {
   text-decoration: none;
   font-family: 'Times';
-  font-size: 1.1rem;
+  font-size: 0.9rem;
 }
+
+
 
 #paragraph--div {
   margin: 0px 300px;
@@ -115,7 +118,7 @@ legend {
   padding-left: 20px;
   font-size: 1.4rem;
 
-  border: 2px solid lightcoral;
+  /*border: 2px solid lightcoral;*/
 }
 
 .frameblog--div p {
@@ -126,6 +129,7 @@ legend {
 
   font-size: 1.2rem;
   background: dimgrey;
+  border: 1px solid gray;
   border-radius: 0px 0px 15px 10px;
 
 }
