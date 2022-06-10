@@ -41,6 +41,8 @@
   },
   "devDependencies": {
     "@testing-library/react": "^13.3.0",
-    "jest": "^28.1.1"
+    "jest": "^28.1.1",
+    "node-sass": "^7.0.1",
+    "sass": "^1.52.3"
   }
 }
