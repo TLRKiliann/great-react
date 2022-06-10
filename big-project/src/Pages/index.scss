@@ -1,0 +1,48 @@
+
+
+$chars : 10;
+$duration : .25s;
+$bounce : cubic-bezier(.4,1.4,.75,.9);
+$scale : 5000;
+
+html, body { 
+  height: 100%;
+  overflow: hidden;
+  user-select: none;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(#1a1a1a, #000);
+}
+
+h1 {
+  font: 300 50px/1 courier;
+  white-space: nowrap;
+  color: whitesmoke;
+}
+
+span {
+  display: inline-block;
+  animation: stretch $chars*$duration $bounce infinite;
+  transform-origin: center;
+  
+  @for $i from 1 through $chars {
+    &:nth-of-type(#{$i}) {
+      animation-delay: $i*$duration;
+    }
+  }
+}
+  
+@keyframes stretch {
+  5% { 
+    transform: scaleX($scale);
+    opacity: .1;
+  }
+  15% { 
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
