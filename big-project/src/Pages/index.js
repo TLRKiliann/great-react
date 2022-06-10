@@ -1,12 +1,12 @@
 import React from 'react';
 import "./style.css"
 
-const Index = () => {
+const Home = () => {
   return (
     <div className="about--div">
-      <h1>Welcome to this site</h1>
+      <h1>Home</h1>
     </div>
   );
 };
 
-export default Index;
+export default Home;

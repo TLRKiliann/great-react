@@ -6,8 +6,6 @@ import "./style.css"
 Miss to verify password (passwd and confirm)
 */
 
-
-
 class SignUp extends React.Component {
   constructor(props) {
     super(props);
@@ -63,8 +61,10 @@ class SignUp extends React.Component {
   render() {
     const {entryName, entryLastName, passwd, confirm, entryEmail, rememberMe} = this.state;
     return (
-      <div className="about--div">
-        <h1>Sign Up</h1>
+      <div>
+        <div className="about--div">
+          <h1>Sign Up</h1>
+        </div>
 
         <div id="form--div">
 

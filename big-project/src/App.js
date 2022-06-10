@@ -3,8 +3,7 @@ import React, { useState, useEffect } from "react";
 
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-//import Index from "./pages/index.js";
-import Home from "./Pages/Home";
+import Home from './Pages';
 import About from './Pages/about';
 import Blogs from './Pages/blogs';
 import SignUp from './Pages/signup';
@@ -38,16 +37,16 @@ function App() {
         {"Dark Mode"}
       </button>}
 
-      <div className="">
+      <div className="routes--class">
         <Router>
-          <Navbar />
-          <Routes>
-            <Route path="/Home" element={<Home />} />
-            <Route path='/about' element={<About />} />
-            <Route path='/contact' element={<Contact />} />
-            <Route path='/blogs' element={<Blogs />} />
-            <Route path='/sign-up' element={<SignUp />} />
-          </Routes>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/blogs' element={<Blogs />} />
+          <Route path='/sign-up' element={<SignUp />} />
+        </Routes>
         </Router>
       </div>
     

@@ -16,7 +16,7 @@ body {
 
 .App {
   width: 100%;
-  height: 300vh;
+
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: 'One serif';
@@ -37,4 +37,7 @@ body {
 
 .home--div {
   margin: 0px 50px;
+}
+
+.routes--class {
 }

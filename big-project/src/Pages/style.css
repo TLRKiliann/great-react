@@ -5,11 +5,12 @@ body {
 }
 
 .about--div {
-  margin: 0px 50px;
+  margin: auto;
+  padding-left: 20px;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 h3 {
@@ -29,7 +30,7 @@ legend {
 }
 
 #form--div {
-  margin: auto;
+  /*left: 0px;*/
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,7 +45,6 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 
   border: 2px solid blue;
 }

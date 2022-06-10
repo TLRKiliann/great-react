@@ -4,7 +4,7 @@ import "./style.css"
 const Contact = () => {
   return (
     <div className="about--div">
-      <h1>Mail us on koalatree@gmail.com</h1>
+      <h1>Contact</h1>
     </div>
   );
 };
