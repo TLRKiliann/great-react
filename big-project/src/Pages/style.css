@@ -17,10 +17,6 @@ h3 {
   font-size: 2rem;
 }
 
-.paragraph--div {
-  text-align: justify;
-}
-
 p {
   font-size: 1rem;
 }
@@ -28,6 +24,134 @@ p {
 legend {
   margin: 20px;
 }
+
+
+/*blog style*/
+#mainblog--div {
+  margin: auto;
+  padding: auto;
+  padding-bottom: 20px;
+
+  border: 2px solid orange;
+}
+
+.blog--div {
+  margin: auto;
+  padding-left: 20px;
+
+  border: 2px solid white;
+}
+
+.asideblog--div {
+  position: fixed;
+  display: flex;
+
+  width: 240px;
+  height: 60%;
+  border: 2px solid white;
+}
+
+.aside--blog {
+  height: auto;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 2px solid orange;
+}
+
+.aside--blog nav {
+  margin: auto;
+  display: flex;
+
+
+  border: 2px solid pink;
+}
+
+.aside--blog ul {
+  margin: auto;
+  padding-left: 0px;
+  border: 2px solid blue;
+}
+
+.aside--blog li {
+  margin: 20px 0px;
+
+  border: 2px solid violet;
+}
+
+.bloglink--div {
+  text-decoration: none;
+  font-family: 'Times';
+  font-size: 1.1rem;
+}
+
+#paragraph--div {
+  margin: 0px 300px;
+
+  border: 2px solid coral;
+}
+
+#paragraph--div h2 {
+  margin: auto;
+  margin: 20px 0px;
+  font-family: 'Arial', sans-serif;
+  font-size: 1.6rem;
+
+  border: 2px solid lightblue;
+}
+
+.frameblog--div {
+  margin: 0px 300px;
+  margin-bottom: 20px;
+
+  border: 1px solid white;
+  border-radius: 15px;
+}
+
+.frameblog--div h3 {
+  margin: auto;
+  padding-left: 20px;
+  font-size: 1.4rem;
+
+  border: 2px solid lightcoral;
+}
+
+.frameblog--div p {
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+
+  font-size: 1.2rem;
+  background: dimgrey;
+  border-radius: 0px 0px 15px 10px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #form--div {
   /*left: 0px;*/

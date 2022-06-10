@@ -1,11 +1,13 @@
 :root {
   --bg-color: #fff;
   --text-color: #000;
+  --bd-color: #000;
 }
 
 [data-theme="dark"] {
   --bg-color: #3F3F3F;
   --text-color: #fff;
+  --bd-color: #fff;
 }
 
 body {
@@ -19,9 +21,16 @@ body {
 
   background-color: var(--bg-color);
   color: var(--text-color);
+  border-color: var(--bd-color);
   font-family: 'One serif';
 
   /*border: 2px solid lightblue;*/
+}
+
+.frameblog--div {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border-color: var(--bd-color);
 }
 
 .btn--dark {

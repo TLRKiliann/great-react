@@ -8,8 +8,9 @@ export const Nav = styled.nav`
   height: 85px;
   display: flex;
   justify-content: space-between;
-  padding: 0.2rem calc((100vw - 1000px) / 2);
   z-index: 12;
+
+  border: 2px solid orange;
 `;
   
 export const NavLink = styled(Link)`
@@ -21,7 +22,9 @@ export const NavLink = styled(Link)`
   height: 100%;
   cursor: pointer;
   &.active {
-    color: yellow;
+    color: cyan;
+
+  border: 2px solid cyan;
   }
 `;
   
@@ -45,5 +48,7 @@ export const NavMenu = styled.div`
   margin-right: -24px;
   @media screen and (max-width: 768px) {
     display: none;
+
+  border: 2px solid yellow;
   }
 `;
